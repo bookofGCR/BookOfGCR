@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
    <head>       
-        <style>
-        *{
-            margin:0;
-            padding: 0;
-        }
-        h1 {text-align: center;}
-        h2 {text-align: center;}
-        p {text-align: center;}
-        div {text-align: center;}        
-      
-        #container { overflow: hidden; }
-        #floated-imgs { float: left; }
-        #floated-imgs img {display: block; 
-                           width: 20%;
-                           height: 100%;}
-        #floated-imgs2 { float: right; }
-        #floated-imgs2 img {display: block; 
-                            width: 20%;
-                            height: 100%;}
-        #book       {  margin: 0 auto; 
-                        width: 20%;
-                        height: 100%; }
-
-        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create three unequal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 10px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+    
+    .left, .right {
+      width: 25%;
+    }
+    
+    .middle {
+      width: 50%;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
      <title>Book of GCR</title>
    </head>
    <body style="background-color:rgb(78, 78, 78);">
@@ -41,50 +45,22 @@
       
     <h1 style="color:rgb(167, 167, 6)">GCR Wisdom</h1>
 
-    <div class="container">
-        <div id="floated-imgs">
+
+    <div class="row">
+        <div class="column left">
             <img src="stock-photo-divine-mercy-of-jesus-god-of-christian-1449825740.png">
             <img src="8pnky8.jpg">
             <img src="oracle-delphi.jpg">  
         </div>
-        
-        <div id="floated-imgs2">
+        <div class="column middle" >
+            <img src="OldTwoPages.png">
+        </div>
+        <div class="column right">
             <img  src="John_William_Waterhouse_-_Consulting_the_Oracle_-_Christie's.jpg">
             <img  src="ezekiel-all-people-photo-1.jpg"> 
             <img  src="Jesaja_(Michelangelo).jpg">   
-        </div>    
-        
-        <div id="book">
-        <img src="OldTwoPages.png">
-        </div> 
-    </div>    
-    
-      
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus nibh arcu, vitae luctus leo congue ac. Maecenas hendrerit urna in diam lacinia sollicitudin. Etiam nec posuere dolor, at rutrum enim. Vivamus vitae nisi id quam rhoncus vestibulum faucibus et lectus. Maecenas a arcu sed felis iaculis laoreet id et leo. Vestibulum eget fermentum dui. Nulla lacinia bibendum massa ornare fermentum. Maecenas blandit leo massa, sit amet lobortis eros commodo id. Duis porttitor dolor quis nunc gravida imperdiet. Ut sit amet suscipit lorem, tincidunt mattis enim.
-    
-    Ut condimentum turpis et lobortis dapibus. Phasellus vitae sollicitudin ipsum. Integer auctor nec tortor nec rhoncus. Etiam sed leo nec neque ultricies lobortis a at massa. Donec semper iaculis sapien, eu laoreet dui bibendum eget. Nulla interdum arcu nibh, in imperdiet erat euismod in. Curabitur lacinia pretium est, a tempus lorem ullamcorper convallis. Sed ultrices volutpat sapien non adipiscing. Integer porttitor odio at massa elementum, ac pulvinar ligula varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas tincidunt risus non congue pretium. Ut gravida accumsan bibendum. Mauris ut mi nec nisi pellentesque rutrum.
-    
-    Maecenas blandit est in dolor accumsan, at porta dolor consequat. Suspendisse dictum magna ipsum, sed vestibulum nunc vehicula nec. Sed vel ornare eros, vitae dapibus mi. Suspendisse condimentum tellus vel ullamcorper blandit. Vestibulum hendrerit urna vitae vulputate pulvinar. Nulla eu turpis lorem. Mauris tempor libero sed ligula vulputate, ut adipiscing velit condimentum.
-    
-    In hac habitasse platea dictumst. Aenean arcu urna, convallis quis mi eget, mattis posuere magna. Donec varius urna vel risus vestibulum varius. Etiam sit amet gravida purus. In posuere imperdiet lectus sed suscipit. Vestibulum lobortis tristique elementum. Fusce mollis quis dolor id accumsan. Mauris mattis ultricies quam, scelerisque auctor libero blandit nec. Vivamus at enim pellentesque, dapibus lorem ac, congue enim. Etiam ultrices, metus et placerat pellentesque, diam mi vestibulum tortor, eget lobortis diam tellus eu orci. Praesent ut lobortis nibh. Quisque id justo venenatis, varius sem vel, molestie leo.
-    
-    Integer molestie massa id rhoncus suscipit. Fusce vestibulum hendrerit blandit. Nam tempus porttitor pellentesque. Cras scelerisque urna at viverra convallis. Mauris ut orci lorem. Fusce tincidunt tellus eu nulla accumsan, et suscipit eros viverra. Integer ut dictum eros. Etiam ipsum erat, volutpat at eros sit amet, consequat laoreet arcu. Integer erat dolor, cursus sit amet mauris vel, consectetur scelerisque eros. Nam quis nisl justo. Morbi et magna rutrum, blandit massa ac, lacinia metus. Donec sed placerat nisl, eu malesuada arcu. Suspendisse lobortis justo leo, eu posuere quam iaculis ut. Suspendisse interdum odio sit amet est lobortis condimentum. Sed massa lorem, elementum id euismod quis, mattis sit amet diam. 
-    </div>
-      
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
+      </div>
 
 
 
