@@ -46,14 +46,32 @@
     
     <script> 
         let i = 1;
+        let prefix = 'g';
+        let videos = [
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10'
+        ]
+
         function changeVideo()
         {
-        i++
-        var video = document.getElementById("video");
-        video.src="g"+ i;
-        return false;
-        }
-        
+         i++
+            if (i >= vides.length)
+            {
+                i = 1;
+            }
+            else
+            {
+            document.querySelector("video").src = prefix + videos[i];
+            }
+        }        
      </script>
 
 
@@ -92,7 +110,7 @@
             </video>
 
             <br><br><br>
-            <button id="clickme" onclick="changeVideo();">Click to change image!</button>
+            <button id="clickme" onclick="changeVideo();"> --- > </button>
 
            <!--- <img src="OldTwoPages.png"> --->
             <p> It's all just history repeating itself...
