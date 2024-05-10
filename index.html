@@ -20,55 +20,15 @@
         margin-right: auto;
         }
       
-        #memes img {
-            display: block;
-            position:absolute;
-            top:0;
-            left:0;
-        }
+        #container { overflow: hidden; }
+        #floated-imgs { float: left; }
+        #floated-imgs img {display: block; }
 
-        #memes2 img {
-            display: block; 
-            position:absolute;
-            top:0;
-            right:0;
-        }
+        #container2 { overflow: hidden; }
+        #floated-imgs2 { float: left; }
+        #floated-imgs2 img {display: block; }
 
-
-       .parent {
-            position: relative;
-            width: 200px;
-        }
-        .child {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100px;
-        }
-        .parent:before {
-            display: block;
-            content: ' ';
-            width: 100%;
-            height: 100px;
-        }
-
-        .parent2 {
-            position: relative;
-            width: 200px;
-        }
-        .child2 {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100px;
-        }
-        .parent2:before {
-            display: block;
-            content: ' ';
-            width: 100%;
-            height: 100px;
-        }
+        
 
         </style>
      <title>Book of GCR</title>
@@ -84,23 +44,19 @@
       </p>
       <br>
 
-     <div class="parent">
-        <div class ="child">
-        <img style="background-position: top left;" src="stock-photo-divine-mercy-of-jesus-god-of-christian-1449825740.png" class="ribbon" alt="" />
-        </div>
-        <img style="background-position: top left;" src="8pnky8.jpg" class="ribbon" alt="" />
-        <img style="background-position: top left;" src="oracle-delphi.jpg" class="ribbon" alt="" />        
-        
-     </div>
+     <div id="container">
+        <div id="floated-imgs">
+        <img src="stock-photo-divine-mercy-of-jesus-god-of-christian-1449825740.png" class="ribbon" alt="" />
+        <img src="8pnky8.jpg" class="ribbon" alt="" />
+        <img src="oracle-delphi.jpg" class="ribbon" alt="" />      
+        </div>    
 
-
-
-     <div class="parent2">
-        <div class ="child2">
-        <img  style="background-position: top right;" src="John_William_Waterhouse_-_Consulting_the_Oracle_-_Christie's.jpg" class="ribbon" alt="" />
-        </div>
-         <img  style="background-position: top right;" src="HANSENMimir.webp" class="ribbon" alt="" />         
-     </div>
+        <div id="container2">
+            <div id="floated-imgs2">
+                <img  style="background-position: top right;" src="John_William_Waterhouse_-_Consulting_the_Oracle_-_Christie's.jpg" class="ribbon" alt="" />
+                <img  style="background-position: top right;" src="HANSENMimir.webp" class="ribbon" alt="" />    
+             <img src="oracle-delphi.jpg" class="ribbon" alt="" />      
+            </div>    
 
 
      
