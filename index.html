@@ -5,18 +5,36 @@
     <style>
     * {
       box-sizing: border-box;
+      
+
       h1 {text-align: center;
-          color:rgb(167, 167, 6)
+          font-size: 50px;
+          color:rgb(240, 240, 22)
          }      
+
       h2 {text-align: center;
-          color:rgb(167, 167, 6)      
+         font-size: 40px;
+          color:rgb(240, 240, 22)      
          }
 
 
       p {text-align: center;
-         color:rgb(167, 167, 6)    
+            font-size: 25px;
+         color:rgb(240, 240, 22)    
         }
       div {text-align: center;}
+    }
+    button {
+        background-color: #000000; /* Green */
+        border: none;
+        color: white;
+        padding: 35px 72px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
     }
     
     /* Create three unequal columns that floats next to each other */
@@ -45,7 +63,7 @@
    <body style="background-color:rgb(78, 78, 78);">
     
     <script type="text/javascript"> 
-        let i = 1;
+        let i = 0;
         let prefix = 'g';
         let videos = [
             '1',
@@ -59,17 +77,37 @@
             '9',
             '10'
         ]
+        
+        function playAudio() {
+       
+      }
+
+        function rollback() {
+            gif.style.display = 'none';            
+            video.style.display = 'block';
+            button.disabled = false;
+        }
 
         function changeVideo()
         {
-         i += 1;
+         i ++;
             if (i >= videos.length)
             {
                 i = 1;
             }
             else
             {
-            document.querySelector("video").src = prefix + videos[i];
+            var gif = document.getElementById("gif");
+            var video = document.getElementById("video");
+            var audio = document.getElementById("pagina");
+            var button = document.getElementById("button");
+            audio.play();    
+            button.disabled = true;
+            gif.style.display = 'block';            
+            video.style.display = 'none';
+            setTimeout(rollback, 3000);            
+            console.log("Teste" + prefix + videos[i]+".mp4");
+            document.querySelector("video").src = prefix + videos[i]+".mp4";
             }
         }        
      </script>
@@ -82,18 +120,20 @@
         <source src="Y2meta.app - Allegri - Miserere mei, Deus (128 kbps).mp3" type="audio/mpeg">
          Your browser does not support the audio element.
       </audio>
-      <h1 style="color:rgb(167, 167, 6)">Book of GCR</h1>
+
+      <audio id="pagina" src="FlippingPages.ogg"></audio>
+      <h1>Book of GCR</h1>
       <br>
 
-      <h2 style="color:rgb(167, 167, 6)">CA: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h2>
+      <h2><a href="https://docs.google.com/presentation/d/1ZARMMox-NZDZ6u0sbVUzCswREwqduNNDadESofbBZGE/mobilepresent?slide=id.gf804fedb5a_1_57">CA: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></h2>
       <br>
-      <p style="color:rgb(167, 167, 6)">Launched at pumpfun. No twitter, no socials (i i'm to dumb to run it/lazy), feel free to do one if you guy want too :) 
-         i'm dumping my 5% as soon as i can buy a home, you've been warned.
+      <p>Launched at pumpfun. No twitter, no socials (i'm to dumb to run it/lazy), feel free to do one if you guy want too :) 
+        <br> i'm selling my 1 SOL initial as soon as i can buy a home, you've been warned.
       </p>
       <br> 
 
       
-    <h1 style="color:rgb(167, 167, 6)">GCR Wisdom</h1>
+    <h1>GCR Wisdom</h1>
 
 
     <div class="row">
@@ -105,13 +145,15 @@
         </div>
         <div class="column middle" >
 
-            <video id = "video" width="850" height="700" autoplay muted>
+            <img id ="gif" src="FlippingPages.gif" width="925" height="700" style = "display: none;">
+
+            <video id = "video" width="925" height="700" autoplay muted>
                 <source src="g1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
 
-            <br><br><br>
-            <button onclick="changeVideo()" type = "button"> --- > </button>
+            <br>
+            <button id = "button" onclick="changeVideo()" type = "button"> Study GCR </button>
 
            <!--- <img src="OldTwoPages.png"> --->
             <p> It's all just history repeating itself...
@@ -120,7 +162,9 @@
             <p> The Olympus, where we all shall rest.</p>     
             <p> I devote this website made in HTML as a tribute to the new gods and kings.</p>
 
-            
+            <br>
+
+            <img src="offer.jpg" width="925" height="700" >
         </div>
         <div class="column right">
             <img  src="John_William_Waterhouse_-_Consulting_the_Oracle_-_Christie's.jpg"  style="width: 100%">
