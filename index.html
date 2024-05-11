@@ -35,7 +35,10 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
+
+    button:hover {background-color: #dd8f19}
     
     /* Create three unequal columns that floats next to each other */
     .column {
@@ -73,9 +76,7 @@
             '5',
             '6',
             '7',
-            '8',
-            '9',
-            '10'
+            '8'
         ]
         
         function playAudio() {
@@ -90,10 +91,10 @@
 
         function changeVideo()
         {
-         i ++;
+         i += 1;
             if (i >= videos.length)
             {
-                i = 1;
+                i = -1;
             }
             else
             {
@@ -105,7 +106,7 @@
             button.disabled = true;
             gif.style.display = 'block';            
             video.style.display = 'none';
-            setTimeout(rollback, 3000);            
+            setTimeout(rollback, 2000);            
             console.log("Teste" + prefix + videos[i]+".mp4");
             document.querySelector("video").src = prefix + videos[i]+".mp4";
             }
@@ -127,8 +128,10 @@
 
       <h2><a href="https://docs.google.com/presentation/d/1ZARMMox-NZDZ6u0sbVUzCswREwqduNNDadESofbBZGE/mobilepresent?slide=id.gf804fedb5a_1_57">CA: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</a></h2>
       <br>
-      <p>Launched at pumpfun. No twitter, no socials (i'm to dumb to run it/lazy), feel free to do one if you guy want too :) 
-        <br> i'm selling my 1 SOL initial as soon as i can buy a home, you've been warned.
+      <p>Launched at pumpfun. No twitter, no socials (i'm too dumb to run it/lazy), feel free to do one if you guys want too :) 
+        
+        <br> PS: play the music and use headset for better experience
+        <br> PS2: more pages soon (i need to sleep)
       </p>
       <br> 
 
@@ -167,7 +170,7 @@
             <img src="offer.jpg" width="925" height="700" >
         </div>
         <div class="column right">
-            <img  src="John_William_Waterhouse_-_Consulting_the_Oracle_-_Christie's.jpg"  style="width: 100%">
+            <img  src="1712912226561.jpg"  style="width: 100%">
             <img  src="ezekiel-all-people-photo-1.jpg"  style="width: 100%"> 
             <img  src="Jesaja_(Michelangelo).jpg"  style="width: 100%">   
         </div>
